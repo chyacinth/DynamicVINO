@@ -125,7 +125,7 @@ See document and source code of our derived input and output class for detailed 
 ## License
 This project is licensed under the Apache-2.0 License.
 # TODO List
-- [ ] Add a Remove function for Pipeline establishment.
+- [x] Add a Remove function for Pipeline establishment.
  - [ ] Potential speed up can be achieved by moving starting next inference before handling output for current inference in Pipeline' s callback function.
  - [ ] Refine check logic in add function of Pipeline
  - [ ] printPipeline function needs to be beautified.
