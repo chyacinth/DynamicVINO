@@ -14,6 +14,7 @@ class EmotionDetectionModel : public BaseModel {
  public:
   EmotionDetectionModel(
       const std::string &, int, int, int);
+  ~EmotionDetectionModel() override = default;
   inline const std::string getInputName() { return input_; }
   inline const std::string getOutputName() { return output_; }
   const std::string getModelName() const override;

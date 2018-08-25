@@ -15,6 +15,8 @@
 namespace Input {
 class BaseInputDevice {
  public:
+  BaseInputDevice() = default;
+  virtual ~BaseInputDevice() = default;
   /**
    * @brief Initialize the input device,
    * for cameras, it will turn the camera on and get ready to read frames,
@@ -39,7 +41,6 @@ class BaseInputDevice {
    */
   virtual bool read(cv::Mat *frame) = 0;
   virtual void config() = 0; //< TODO
-  virtual ~BaseInputDevice() = default;
   /**
    * @brief Get the width of the frame read from input device.
    * @return The width of the frame read from input device.

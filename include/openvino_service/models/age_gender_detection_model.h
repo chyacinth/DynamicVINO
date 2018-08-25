@@ -14,6 +14,7 @@ class AgeGenderDetectionModel : public BaseModel {
  public:
   AgeGenderDetectionModel(
       const std::string &, int, int, int);
+  ~AgeGenderDetectionModel() override = default;
   inline const std::string getInputName() const {return input_;}
   inline const std::string getOutputAgeName() const {return output_age_;}
   inline const std::string getOutputGenderName() const {return output_gender_;}

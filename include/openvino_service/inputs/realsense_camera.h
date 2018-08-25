@@ -13,6 +13,8 @@
 namespace Input {
 class RealSenseCamera : public BaseInputDevice {
  public:
+  RealSenseCamera() = default;
+  ~RealSenseCamera() override = default;
   bool initialize() override;
   bool initialize(int t) override { return true; };
   bool initialize(size_t width, size_t height) override;

@@ -13,6 +13,8 @@
 namespace Input {
 class StandardCamera : public BaseInputDevice {
  public:
+  StandardCamera() = default;
+  ~StandardCamera() override = default;
   bool initialize() override;
   bool initialize(int t) override;
   bool initialize(size_t width, size_t height) override;

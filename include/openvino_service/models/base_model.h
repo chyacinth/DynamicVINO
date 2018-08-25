@@ -35,6 +35,7 @@ class BaseModel {
   BaseModel(
       const std::string &model_loc,
       int input_num, int output_num, int batch_size);
+  virtual ~BaseModel() = default;
   /**
    * @brief Get the label vector.
    * @return The label vector.

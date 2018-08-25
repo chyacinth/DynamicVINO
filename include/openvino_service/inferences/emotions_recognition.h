@@ -31,8 +31,8 @@ class EmotionsResult : public Result {
 class EmotionsDetection : public BaseInference {
  public:
   using Result = openvino_service::EmotionsResult;
-  explicit EmotionsDetection();
-  ~EmotionsDetection() override;
+  EmotionsDetection() = default;
+  ~EmotionsDetection() override = default;
   void loadNetwork(std::shared_ptr<Models::EmotionDetectionModel>);
   bool enqueue(const cv::Mat &, const cv::Rect &) override;
   bool submitRequest() override;

@@ -14,6 +14,7 @@ class FaceDetectionModel: public BaseModel {
  public:
   FaceDetectionModel(
       const std::string &, int, int, int);
+  ~FaceDetectionModel() override = default;
   inline const int getMaxProposalCount() { return max_proposal_count_; }
   inline const int getObjectSize() { return object_size_; }
   inline const std::string getInputName() { return input_; }

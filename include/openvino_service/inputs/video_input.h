@@ -14,6 +14,7 @@ namespace Input {
 class Video : public BaseInputDevice {
  public:
   explicit Video(const std::string &);
+  ~Video() override = default;
   bool initialize() override;
   bool initialize(int t) override { return initialize(); };
   bool initialize(size_t width, size_t height) override;

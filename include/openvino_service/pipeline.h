@@ -58,6 +58,9 @@ class Pipeline {
    * @return whether the add operation is successful
    */              
   bool add(const std::string &parent, const std::string &name);
+
+  bool remove(const std::string &parent, const std::string &name);
+
   /**
    * @brief Do the inference once. 
    * Data flow from input device to inference network, then to output device.

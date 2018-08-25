@@ -29,8 +29,8 @@ class AgeGenderResult : public Result {
 class AgeGenderDetection : public BaseInference {
  public:
   using Result = openvino_service::AgeGenderResult;
-  explicit AgeGenderDetection();
-  ~AgeGenderDetection() override;
+  AgeGenderDetection() = default;
+  ~AgeGenderDetection() override = default;
   void loadNetwork(std::shared_ptr<Models::AgeGenderDetectionModel>);
   bool enqueue(const cv::Mat &frame, const cv::Rect &) override;
   bool submitRequest() override;

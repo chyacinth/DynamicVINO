@@ -37,8 +37,6 @@ openvino_service::FaceDetection::FaceDetection(double show_output_thresh)
       openvino_service::BaseInference() {
 };
 
-openvino_service::FaceDetection::~FaceDetection() = default;
-
 void openvino_service::FaceDetection::loadNetwork(
     const std::shared_ptr<Models::FaceDetectionModel> network) {
   valid_model_ = network;

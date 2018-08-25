@@ -33,8 +33,8 @@ class HeadPoseResult : public Result {
 class HeadPoseDetection : public BaseInference {
  public:
   using Result = openvino_service::HeadPoseResult;
-  explicit HeadPoseDetection();
-  ~HeadPoseDetection() override;
+  HeadPoseDetection() = default;
+  ~HeadPoseDetection() override = default;
   void loadNetwork(std::shared_ptr<Models::HeadPoseDetectionModel>);
   bool enqueue(const cv::Mat &frame, const cv::Rect &) override;
   bool submitRequest() override;

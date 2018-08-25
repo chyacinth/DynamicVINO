@@ -14,6 +14,7 @@ class HeadPoseDetectionModel: public BaseModel{
  public:
   HeadPoseDetectionModel(
       const std::string &, int, int, int);
+  ~HeadPoseDetectionModel() override = default;
   inline const std::string getInputName() const {return input_;}
   inline const std::string getOutputOutputAngleR() const {
     return output_angle_r_;

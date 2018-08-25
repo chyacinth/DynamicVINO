@@ -94,10 +94,6 @@ void openvino_service::HeadPoseResult::decorateFrame(
 };
 
 //Head Pose Detection
-openvino_service::HeadPoseDetection::HeadPoseDetection()
-    : openvino_service::BaseInference() {};
-
-openvino_service::HeadPoseDetection::~HeadPoseDetection() = default;
 
 void openvino_service::HeadPoseDetection::loadNetwork(
     std::shared_ptr<Models::HeadPoseDetectionModel> network) {

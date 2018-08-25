@@ -68,6 +68,17 @@ bool Pipeline::add(const std::string &parent, const std::string &name,
   return true;
 };
 
+bool Pipeline::remove(const std::string &parent, const std::string &name) {
+  auto iterpair = next_.equal_range(parent);
+  for (auto it = iterpair.first; it != iterpair.second; ++it) {
+    if (it->second == name) {
+      next_.erase(it);
+      return true;
+    }
+  }
+  return false;
+}
+
 void Pipeline::runOnce() {
   counter_ = 0;
   if (!input_device_->read(&frame_)) {

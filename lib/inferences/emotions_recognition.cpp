@@ -28,12 +28,6 @@ void openvino_service::EmotionsResult::decorateFrame(
   cv::rectangle(*frame, rect, cv::Scalar(100, 100, 100), 1);
 }
 
-// Emotions Detection
-openvino_service::EmotionsDetection::EmotionsDetection()
-    : openvino_service::BaseInference() {};
-
-openvino_service::EmotionsDetection::~EmotionsDetection() = default;
-
 void openvino_service::EmotionsDetection::loadNetwork(
     const std::shared_ptr<Models::EmotionDetectionModel> network) {
   valid_model_ = network;
@@ -67,6 +61,7 @@ bool openvino_service::EmotionsDetection::fetchResults() {
       in model output. Default output format is NCHW so we check index 1 */
   long num_of_channels = emotions_blob->getTensorDesc().getDims().at(1);
   if (num_of_channels != label_length) {
+    slog::err << "wrong number of label_length!";
     throw std::logic_error("Output size (" + std::to_string(num_of_channels) +
         ") of the Emotions Recognition network is not equal "
         "to used emotions vector size (" +

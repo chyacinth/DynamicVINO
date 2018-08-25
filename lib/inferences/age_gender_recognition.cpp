@@ -26,10 +26,6 @@ void openvino_service::AgeGenderResult::decorateFrame(
 }
 
 // AgeGender Detection
-openvino_service::AgeGenderDetection::AgeGenderDetection()
-    : openvino_service::BaseInference() {};
-
-openvino_service::AgeGenderDetection::~AgeGenderDetection() = default;
 
 void openvino_service::AgeGenderDetection::loadNetwork(
     std::shared_ptr<Models::AgeGenderDetectionModel> network) {
