@@ -1,29 +1,8 @@
 # DynamicVINO - Dynamic OpenVINO Library
-DynamicVINO is an open-source C++ library for establishing easy-to-use, extensible and scalable deep learning inference system based on Intel' s OpenVINO toolkit version 2.299. DynamicVINO provides an interface for adding new neural networks. It also provides asynchronous inference for various connection topology between neural networks. The connection topology can also be changed in runtime. Stars, Pull requests, issue report, forks are all welcome!
+DynamicVINO is an open-source C++ library for establishing easy-to-use, extensible and scalable deep learning inference system based on Intel' s OpenVINO toolkit version 2.299. DynamicVINO provides an interface for adding new neural networks. It also provides asynchronous inference for various connection topology between neural networks. The connection topology can also be changed in runtime. Stars, Pull requests, issue report, forks are all welcome! This library is used by Intel's official [**ros_openvino_toolkit**](github.com/intel/ros_openvino_toolkit) library.
 
 ## Table of Contents
-<!-- TOC -->
-
-- [DynamicVINO - Dynamic OpenVINO Library](#dynamicvino---dynamic-openvino-library)
-	- [Table of Contents](#table-of-contents)
-	- [Author](#author)
-	- [Getting Started](#getting-started)
-		- [Prerequisites](#prerequisites)
-		- [Build The Library](#build-the-library)
-	- [Running sample](#running-sample)
-	- [How to use the library?](#how-to-use-the-library)
-		- [1. Create a plugin for target device](#1-create-a-plugin-for-target-device)
-		- [2. Create input device instance and output device instance](#2-create-input-device-instance-and-output-device-instance)
-		- [3. Create Inference Instance](#3-create-inference-instance)
-		- [4. Create a pipeline for data flow management](#4-create-a-pipeline-for-data-flow-management)
-		- [5. Add more networks and device to the pipeline](#5-add-more-networks-and-device-to-the-pipeline)
-	- [How to generate documents for this library?](#how-to-generate-documents-for-this-library)
-	- [How to add new inference class?](#how-to-add-new-inference-class)
-	- [How to add new Input/Output device?](#how-to-add-new-inputoutput-device)
-	- [License](#license)
-	- [TODO List](#todo-list)
-
-<!-- /TOC -->
+<!-- TOC -->autoauto- [DynamicVINO - Dynamic OpenVINO Library](#dynamicvino---dynamic-openvino-library)auto    - [Table of Contents](#table-of-contents)auto    - [Author](#author)auto    - [Getting Started](#getting-started)auto        - [Prerequisites](#prerequisites)auto        - [Build The Library](#build-the-library)auto    - [Running sample](#running-sample)auto    - [How to use the library?](#how-to-use-the-library)auto        - [1. Create a plugin for target device](#1-create-a-plugin-for-target-device)auto        - [2. Create input device instance and output device instance](#2-create-input-device-instance-and-output-device-instance)auto        - [3. Create Inference Instance](#3-create-inference-instance)auto        - [4. Create a pipeline for data flow management](#4-create-a-pipeline-for-data-flow-management)auto        - [5. Add more networks and device to the pipeline](#5-add-more-networks-and-device-to-the-pipeline)auto    - [How to generate documents for this library?](#how-to-generate-documents-for-this-library)auto    - [How to add new inference class?](#how-to-add-new-inference-class)auto    - [How to add new Input/Output device?](#how-to-add-new-inputoutput-device)auto    - [License](#license)auto    - [TODO List](#todo-list)autoauto<!-- /TOC -->
 ## Author
 - [Xuyang Chen](https://github.com/chyacinth) - Design and Development
 ## Getting Started
